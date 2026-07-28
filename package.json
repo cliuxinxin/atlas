@@ -1,0 +1,13 @@
+{
+  "name": "atlas-static-projects",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "preview": "npx serve dist"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
+
