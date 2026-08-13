@@ -9,4 +9,6 @@ export function completeSession(state,{day,duration,note}){
   const first=!state.completed.includes(day);
   return {...state,completed:first?[...state.completed,day]:state.completed,totalSeconds:state.totalSeconds+(first?duration:0),notes:note?{...state.notes,[day]:note}:state.notes};
 }
-export function recommendNext(state){return Math.min(7,Math.max(1,...state.completed,0)+1);}
+export function recommendNext(state){
+  return state.completed.length ? Math.min(7, Math.max(...state.completed) + 1) : 1;
+}
