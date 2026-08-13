@@ -4,4 +4,4 @@ dist/
 projects/*/node_modules/
 projects/*/dist/
 projects/*/build/
-
+.worktrees/
